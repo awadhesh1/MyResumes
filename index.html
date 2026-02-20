@@ -4,193 +4,239 @@
   <meta charset="UTF-8" />
   <title>Awadhesh Singh Kushwaha | Senior iOS & Flutter Engineer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Portfolio of Awadhesh Singh Kushwaha, Senior iOS & Flutter Engineer with 8+ years of experience in Swift, SwiftUI, Objective-C, and Flutter." />
+  <meta name="description" content="Senior iOS & Flutter Engineer with 8+ years of experience in Swift, SwiftUI, Flutter, MVVM, and Clean Architecture. Open to Remote roles." />
 
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
-    body { background: #f4f7f5; color: #1f2933; line-height: 1.6; }
-    a { color: #15803d; text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
 
-    .page { max-width: 1100px; margin: 0 auto; padding: 1.5rem; }
+    body {
+      background: #f4f7f5;
+      color: #1f2933;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #15803d;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 1.5rem;
+    }
 
     header {
-      padding: 0.5rem 0 1.25rem;
-      border-bottom: 1px solid #d2d6dc;
-      margin-bottom: 1.5rem;
       display: flex;
       justify-content: space-between;
-      align-items: center;
       flex-wrap: wrap;
-      gap: 0.75rem;
+      gap: 1rem;
+      border-bottom: 1px solid #d2d6dc;
+      padding-bottom: 1rem;
+      margin-bottom: 2rem;
     }
 
-    .brand { font-size: 1.1rem; font-weight: 600; color: #102a43; }
+    h1 {
+      font-size: 2rem;
+      color: #031b4e;
+    }
 
-    .header-links {
+    h2 {
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+      color: #102a43;
+    }
+
+    .tagline {
+      color: #52606d;
+      margin-top: 0.3rem;
+    }
+
+    .links a {
+      margin-right: 0.75rem;
       font-size: 0.9rem;
-      display: flex;
-      gap: 0.75rem;
-      flex-wrap: wrap;
-    }
-
-    .pill {
-      padding: 0.25rem 0.7rem;
+      background: #ffffff;
+      padding: 0.3rem 0.7rem;
       border-radius: 999px;
       border: 1px solid #cbd2d9;
-      background: #ffffff;
-      font-size: 0.85rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
     }
 
-    .hero {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.75rem;
-      align-items: center;
-      margin-bottom: 2.25rem;
+    section {
+      margin-bottom: 2rem;
     }
 
-    .hero-text { flex: 1 1 280px; }
-
-    .hero-badge {
-      background: #ecfdf3;
-      border-radius: 999px;
-      padding: 0.3rem 0.85rem;
-      font-size: 0.8rem;
-      color: #166534;
-      border: 1px solid #bbf7d0;
-      margin-bottom: 0.8rem;
-      display: inline-flex;
-      gap: 0.5rem;
+    ul {
+      padding-left: 1.2rem;
+      margin-top: 0.5rem;
     }
 
-    .hero-title { font-size: 2.25rem; font-weight: 700; color: #031b4e; margin-bottom: 0.4rem; }
-
-    .hero-subtitle { font-size: 1rem; color: #52606d; margin-bottom: 1rem; max-width: 32rem; }
-
-    .hero-actions { display: flex; gap: 0.75rem; flex-wrap: wrap; }
-
-    .btn {
-      padding: 0.65rem 1.4rem;
-      border-radius: 999px;
-      border: 1px solid transparent;
-      cursor: pointer;
-      font-weight: 600;
-      font-size: 0.95rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
+    li {
+      margin-bottom: 0.35rem;
     }
-
-    .btn-primary { background: #16a34a; color: #ecfdf3; }
-    .btn-primary:hover { background: #15803d; }
-
-    .btn-outline { background: #ffffff; border-color: #cbd2d9; color: #1f2933; }
-    .btn-outline:hover { border-color: #16a34a; }
-
-    .hero-card {
-      flex: 0 0 260px;
-      background: #ffffff;
-      border-radius: 1.1rem;
-      padding: 1.4rem;
-      border: 1px solid #e4e7eb;
-    }
-
-    section { margin-bottom: 2rem; }
-    section h2 { font-size: 1.35rem; margin-bottom: 0.85rem; color: #102a43; }
-
-    .grid { display: grid; gap: 1rem; }
-    @media (min-width: 768px) { .grid-2 { grid-template-columns: repeat(2, 1fr); } }
 
     .card {
       background: #ffffff;
-      border-radius: 0.9rem;
       border: 1px solid #e4e7eb;
+      border-radius: 0.75rem;
       padding: 1rem;
+      margin-bottom: 1rem;
     }
 
-    .contact-grid {
-      display: flex;
-      gap: 0.75rem;
-      flex-wrap: wrap;
-      font-size: 0.9rem;
+    .muted {
+      color: #52606d;
+      font-size: 0.95rem;
     }
 
     footer {
-      border-top: 1px solid #d8e2ec;
-      padding: 0.9rem 0 0.5rem;
+      text-align: center;
       font-size: 0.8rem;
       color: #9fb3c8;
-      text-align: center;
+      border-top: 1px solid #d8e2ec;
+      padding-top: 1rem;
+      margin-top: 2rem;
     }
   </style>
 </head>
 
 <body>
-<div class="page">
+  <div class="container">
 
-<header>
-  <div class="brand">Awadhesh Singh Kushwaha</div>
-  <div class="header-links">
-    <span class="pill">📍 Noida, India</span>
-    <a class="pill" href="mailto:asawadhesh8@gmail.com">📧 Email</a>
-    <a class="pill" href="https://www.linkedin.com/in/awadheshsingh123/" target="_blank">🔗 LinkedIn</a>
-    <a class="pill" href="https://github.com/awadhesh1" target="_blank">💻 GitHub</a>
+    <!-- HEADER -->
+    <header>
+      <div>
+        <h1>Awadhesh Singh Kushwaha</h1>
+        <p class="tagline">
+          Senior iOS & Flutter Engineer • Swift • SwiftUI • Flutter • MVVM • Clean Architecture
+        </p>
+        <p class="muted">📍 Noida, India | 🌍 Open to Remote / WFH / Contract Roles</p>
+      </div>
+
+      <div class="links">
+        <a href="mailto:asawadhesh8@gmail.com">📧 Email</a>
+        <a href="https://www.linkedin.com/in/awadheshsingh123/" target="_blank">🔗 LinkedIn</a>
+        <a href="https://github.com/awadhesh1" target="_blank">💻 GitHub</a>
+      </div>
+    </header>
+
+    <!-- ABOUT -->
+    <section>
+      <h2>About Me</h2>
+      <p class="muted">
+        Senior Mobile Engineer with 8+ years of experience building production-grade iOS and Flutter applications
+        used by global users. Specialized in Swift, SwiftUI, UIKit, Flutter (Dart) and modern mobile architectures
+        like MVVM and Clean Architecture.
+      </p>
+    </section>
+
+    <!-- SKILLS -->
+    <section>
+      <h2>Tech Stack</h2>
+      <div class="card">
+        <strong>Mobile:</strong> Swift, SwiftUI, UIKit, Objective-C, Flutter, Dart<br/>
+        <strong>Architecture:</strong> MVVM, Clean Architecture, VIPER, MVC<br/>
+        <strong>Backend:</strong> REST APIs, JSON, Firebase (Auth, Firestore, Push Notifications)<br/>
+        <strong>Tools:</strong> Xcode, Git, GitHub, Fastlane, Bitrise, Azure DevOps<br/>
+        <strong>Testing & Security:</strong> XCTest, Unit/UI Testing, SSL Pinning, OWASP
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section>
+      <h2>Experience</h2>
+
+      <div class="card">
+        <strong>Senior iOS Developer — TrueZen Tech Pvt. Ltd.</strong><br/>
+        <span class="muted">Nov 2024 – Present</span>
+        <ul>
+          <li>Developing SwiftUI-based iOS apps using MVVM and modular architecture.</li>
+          <li>Improved code reusability by ~30% and reduced crash rates.</li>
+          <li>Led App Store releases and mentored junior developers.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <strong>Senior iOS & Flutter Developer — ADG Online Solutions</strong><br/>
+        <span class="muted">Mar 2024 – Nov 2024</span>
+        <ul>
+          <li>Built cross-platform apps using Flutter and Dart.</li>
+          <li>Integrated REST APIs and Firebase services.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <strong>Senior iOS Developer — Mediatrenz Pvt. Ltd.</strong><br/>
+        <span class="muted">Mar 2021 – Feb 2024</span>
+        <ul>
+          <li>Designed enterprise-grade iOS apps in Swift & UIKit.</li>
+          <li>Implemented CI/CD using Bitrise and GitHub.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <strong>iOS Developer — Multiple Companies</strong><br/>
+        <span class="muted">2013 – 2021</span>
+        <ul>
+          <li>Migrated Objective-C apps to Swift.</li>
+          <li>Worked on finance, education, enterprise and utility apps.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section>
+      <h2>Featured Apps</h2>
+
+      <div class="card">
+        <strong>NewTechWood</strong> — iOS (SwiftUI)<br/>
+        <a href="https://apps.apple.com/us/app/newtechwood/id6741138853" target="_blank">View on App Store →</a>
+      </div>
+
+      <div class="card">
+        <strong>Find Banquet</strong> — iOS (Swift)<br/>
+        <a href="https://apps.apple.com/us/app/find-banquet/id1547801752" target="_blank">View on App Store →</a>
+      </div>
+
+      <div class="card">
+        <strong>InCompass Field Management</strong> — iOS (Enterprise)<br/>
+        <a href="https://apps.apple.com/us/app/incompass-field-management/id1592131836" target="_blank">View on App Store →</a>
+      </div>
+
+      <p class="muted">
+        Other apps: YSM, Downey Connect, Don’t Let Me Die, Acceptarer, IR Form, Dosje, NMBA,
+        TaxMann apps, Trendy Bharat, Hindi Made Easy, and more.
+      </p>
+    </section>
+
+    <!-- EDUCATION -->
+    <section>
+      <h2>Education & Achievements</h2>
+      <div class="card">
+        <strong>MCA — Institute of Management & Research, Ghaziabad</strong>
+        <ul>
+          <li>🏆 Best Developer of the Year – 2019 & 2021</li>
+          <li>📱 25+ Apps published on App Store & Play Store</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      © <span id="year"></span> Awadhesh Singh Kushwaha • Remote iOS & Flutter Engineer
+    </footer>
+
   </div>
-</header>
 
-<section class="hero">
-  <div class="hero-text">
-    <div class="hero-badge">
-      <span>Senior iOS & Flutter Engineer</span>
-      <span>8+ Years</span>
-    </div>
-
-    <h1 class="hero-title">Building clean, scalable & production-ready mobile apps.</h1>
-
-    <p class="hero-subtitle">
-      Senior Mobile Engineer specializing in Swift, SwiftUI, UIKit and Flutter.
-      Experienced in delivering high-quality apps for global users using clean architecture and modern iOS practices.
-    </p>
-
-    <div class="hero-actions">
-      <a class="btn btn-primary" href="mailto:asawadhesh8@gmail.com">📩 Hire Me (Remote)</a>
-      <a class="btn btn-outline" href="https://www.linkedin.com/in/awadheshsingh123/" target="_blank">LinkedIn</a>
-      <a class="btn btn-outline" href="https://github.com/awadhesh1" target="_blank">GitHub</a>
-    </div>
-  </div>
-
-  <aside class="hero-card">
-    <strong>Snapshot</strong><br/><br/>
-    ✔ 25+ Apps Delivered<br/>
-    ✔ SwiftUI • Flutter<br/>
-    ✔ MVVM • Clean Arch<br/>
-    ✔ Best Dev 2019 & 2021
-  </aside>
-</section>
-
-<section>
-  <h2>Contact</h2>
-  <div class="contact-grid">
-    <div>📧 <a href="mailto:asawadhesh8@gmail.com">asawadhesh8@gmail.com</a></div>
-    <div>📞 <a href="tel:+919015342908">+91-9015342908</a></div>
-    <div>🔗 <a href="https://www.linkedin.com/in/awadheshsingh123/" target="_blank">LinkedIn</a></div>
-    <div>💻 <a href="https://github.com/awadhesh1" target="_blank">GitHub</a></div>
-  </div>
-</section>
-
-<footer>
-  © <span id="year"></span> Awadhesh Singh Kushwaha • Remote iOS & Flutter Engineer
-</footer>
-
-</div>
-
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
-
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
